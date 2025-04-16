@@ -1,0 +1,8 @@
+﻿WxConnectorProvider是一款高性能的WeChat操作模拟库
+基于 WxConnectorLib 进行封装开发
+WxConnectorLib 仓库地址：https://github.com/El1mir/WxConnector
+本项目仓库地址：https://github.com/El1mir/WxConnectorProvider
+本项目Api文档地址：https://3rr385280j.apifox.cn/
+
+本项目使用 AGPL 3.0 协议开源，请遵循协议使用
+Dev By El1mir
