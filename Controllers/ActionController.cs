@@ -46,4 +46,18 @@ public class ActionController
             statusCode: StatusCodes.Status200OK
         );
     }
+
+    [HttpPost]
+    [Route("AtByUserNameInGroup")]
+    public IResult AtByUserNameInGroupAction([FromBody] AtByUserNameInGroupActionModel data)
+    {
+        ActionUtil.Get().AtByNameInGroup(
+            data.UserName,
+            DataProvider.Get().ListeningWindows.First(x => x.Title == data.WindowTitle)
+        );
+        return Results.Json(
+            new { message = "AT成功" },
+            statusCode: StatusCodes.Status200OK
+        );
+    }
 }

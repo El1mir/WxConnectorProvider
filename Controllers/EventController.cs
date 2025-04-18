@@ -111,5 +111,16 @@ public class EventController : ControllerBase
                 });
             });
         };
+        EventManager.Get().OnNewMessage += (msg, _) =>
+        {
+            Task.Run(async () =>
+            {
+                await SendToAllAsync(new
+                {
+                    eventType = "NewMessageEvent",
+                    data = msg
+                });
+            });
+        };
     }
 }
